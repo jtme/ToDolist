@@ -13,5 +13,8 @@
 }
 
 .col {
+	float: left; width: 50%; 
 	background-color: #888;
 }
+
+
