@@ -56,17 +56,19 @@ ul{
 	min-height: 300px;
 	list-style-type: none;
 	text-transform: uppercase;
+	line-height:130%;
 }
 
 li {
 	background-color: #Fff;
-	border-bottom: 1px solid #A6BBC5;
-	padding-bottom: 2px;
+	border-bottom: 1px solid #BFD4DD;
+	padding-bottom: 0;
 }
 
 li:hover {
-	background-color: #Ff1;
+	
 }
+
 li: {
 	background-color: #F10;
 }
