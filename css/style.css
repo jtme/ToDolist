@@ -48,46 +48,94 @@ body {
 	font-weight: lighter;
 	letter-spacing: 0.05em;
 	background-color: #4B595F;
+	font-size: 1.4em;
 }
 
 ul{
-	background-color: blue;
+	padding: 30px;
+	min-height: 300px;
+	list-style-type: none;
+	text-transform: uppercase;
 }
 
 li {
+	background-color: #Fff;
 	border-bottom: 1px solid #A6BBC5;
-	list-style-type: none;
+	padding-bottom: 2px;
 }
+
+li:hover {
+	background-color: #Ff1;
+}
+li: {
+	background-color: #F10;
+}
+li span {	
+	height: 42px;
+	display: table-cell; 
+    vertical-align: bottom; 
+    padding: 0 0 3px 5px;
+ }
 
 #logo {
 	position: relative;
 	min-width:200px;
-	margin: 30px auto;
+	margin: 40px auto;
 	text-align: center;
+	
 }
-
 .container {	
 	position: relative; 
-	max-width: 960px;
+	max-width: 660px;
 	margin: 0 auto;
 	padding: 0; 
 	background-color: #FFFFFF;
 }
 
+#input  {
+	width: 100%;
+	border: 0;
+	padding: 30px;
+	
+}
+
+#input > input {
+	font-family: 'Oswald', sans-serif;
+	font-weight: lighter;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	font-size: 1em;
+	color: #BFD4DD;
+	background-color: #A6BBC5;
+	outline: none;
+	border: 0;
+	width: 100%;
+	height: 45px;
+}
+
 .col {
 	float: left;
 	width: 50%; 
-	background-color: #888;
+	background-color: #fff;
 }
 
 @media (max-width: 420px) {
-	body {
-		background-color: #f00 !important;
-	}
+
 	.col {
 		float: left;
 		width: 100%; 
-		background-color: #Fee;
+	}
+
+	ul {
+		min-height: 0;
+		padding: 0 30px 0 30px;
+	}
+
+	.col.one {
+		padding-top: 30px;
+	}
+	.col.two {
+		padding-bottom: 30px;
 	}
 }
 
