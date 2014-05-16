@@ -1,9 +1,8 @@
 @media (max-width: 420px) {
-body {
-	background-color: #FFF888;
+	body {
+		background-color: #f00;
+	}
 }
-
-
 
 #logo {
 	position: relative;
@@ -20,7 +19,8 @@ body {
 }
 
 .col {
-	float: left; width: 50%; 
+	float: left; 
+	width: 50%; 
 	background-color: #888;
 }
 
