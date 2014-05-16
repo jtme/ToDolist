@@ -2,6 +2,12 @@
 	body {
 		background-color: #f00 !important;
 	}
+	
+	.col {
+		display: inline-block;
+		width: 100%; 
+		background-color: #888;
+	}
 }
 
 #logo {
@@ -19,7 +25,7 @@
 }
 
 .col {
-	float: left; 
+	display: inline-block;
 	width: 50%; 
 	background-color: #888;
 }
