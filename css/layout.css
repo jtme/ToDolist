@@ -1,6 +1,6 @@
 @media (max-width: 420px) {
 	body {
-		background-color: #f00;
+		background-color: #f00 !important;
 	}
 }
 
