@@ -2,11 +2,10 @@
 	body {
 		background-color: #f00 !important;
 	}
-	
 	.col {
-		display: inline-block;
+		float: left;
 		width: 100%; 
-		background-color: #888;
+		background-color: #Fee;
 	}
 }
 
@@ -25,7 +24,7 @@
 }
 
 .col {
-	display: inline-block;
+	float: left;
 	width: 50%; 
 	background-color: #888;
 }
