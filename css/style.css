@@ -53,20 +53,35 @@ body {
 
 ul{
 	padding: 10px 30px 0 30px;
-	min-height: 300px;
+	min-height: 400px;
 	list-style-type: none;
 	text-transform: uppercase;
 	line-height:130%;
+	box-shadow: 4px 4px 0px #000;
+
 }
 
 li {
 	background-color: #Fff;
 	border-bottom: 1px solid #BFD4DD;
 	padding-bottom: 0;
+	color: #4B595F;
 }
 
+li.done {
+	color: #A6BBC5;
+	text-decoration: line-through;
+
+}
 li:hover {
-	
+	background-color: #FDFEFF;
+
+}
+
+li.done:hover {
+	background: url("del.png") no-repeat center;
+    background-position: right 20px; 
+    background-size: 15px 15px;
 }
 
 li: {
@@ -92,6 +107,7 @@ li span {
 	margin: 0 auto;
 	padding: 0; 
 	background-color: #FFFFFF;
+	box-shadow: 4px 4px 0px #000;
 }
 
 #input  {
