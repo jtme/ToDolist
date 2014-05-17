@@ -159,13 +159,16 @@ li span {
 	}
 	ul {
 		min-height: 0;
-		padding: 0 30px 0 30px;
+		padding: 0 30px 30px 30px;
+		box-shadow: 0;
+
 	}
 	.col.one {
 		padding-top: 10px;
+		margin-bottom: -30px;
 	}
 	.col.two {
-		padding-bottom: 30px;
+		/* padding-bottom: 30px;*/
 	}
 }
 
