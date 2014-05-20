@@ -1,37 +1,42 @@
 $(document).ready(function() {
-
-
-
-  // input field
-  $('#input').click (function() {
  	
- 	var add_value = $('input').val();
-
- 	if(!$.trim(add_value)) {
-			$('input').val('Item cannot be empty');
-		} else {
-			var Alist = $('#id1 li').length
-			var Blist = $('#id2 li').length
-			//figure out the logic where to add item
-			    //if (Alist > Blist) 
-			    //	alert('A')
-			    	//var Activelist = "#id1"
-			    //else
-			    //	alert('B')
-			    	//var Activelist = "#id2"
-	var new_item = $("<li>" + "<span>" + add_value + "</span>" +"</li>");
-		    new_item.appendTo('#id1');
-		    new_item.slideDown();
-		   	$('input').val("");
-
+ 	var list_item = $('.item');
+ 	// turn item on and off 
+	list_item.on('click', function(){ $(this).toggleClass("done"); });
+	// remove on doubleclick
+	list_item.on('dblclick', function(){ $(this).hide(); });
+ 	
+ 	// use enter to add items
+	$('#input').keyup(function(event){
+		if(event.keyCode == 13) {
+			event.preventDefault();
+			$('#input').click();
 		};
-  });
+	});	
+	//click to add items
+	  $('#input').click (function(){
+	  	var add_value = $('input').val();
+	  	var new_item = $("<li class=\"item\"><span>" + add_value + "</span></li>");
+	  	var Alist = $('#id1 li').length;
+		var Blist = $('#id2 li').length;
+		
+		if(add_value.length>0)
+			{
+			  			if (Alist > Blist) {
+							new_item.appendTo('#id2'); 
+						} 
+						else {
+							new_item.appendTo('#id1'); 
+						}			
+			}
+			else {
+				$('input').animate({'background-color': "#E56C75"}, 200);
+				$('input').animate({'background-color': "#A6BBC5"}, 100);
+			}
+		$('input').val('');
+	  });
 
-$('.col').sortable({ axis: "y" });
-  	// on enter add to list
-
- // list drag drop
-
- // list on click mark 
+ // list drag drop ?? between 2 ULs ??
+$('#id1, #id2').sortable();
 
 })
