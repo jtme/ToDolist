@@ -4,7 +4,7 @@ $(document).ready(function() {
  	// turn item on and off 
 	list_item.on('click', function(){ $(this).toggleClass("done"); });
 	// remove on doubleclick
-	list_item.on('dblclick', function(){ $(this).hide(); });
+	list_item.on('dblclick', function(){ $(this).fadeOut(); });
  	
  	// use enter to add items
 	$('#input').keyup(function(event){
@@ -17,17 +17,10 @@ $(document).ready(function() {
 	  $('#input').click (function(){
 	  	var add_value = $('input').val();
 	  	var new_item = $("<li class=\"item\"><span>" + add_value + "</span></li>");
-	  	var Alist = $('#id1 li').length;
-		var Blist = $('#id2 li').length;
 		
 		if(add_value.length>0)
 			{
-			  			if (Alist > Blist) {
-							new_item.appendTo('#id2'); 
-						} 
-						else {
-							new_item.appendTo('#id1'); 
-						}			
+							new_item.appendTo('#list ul'); 		
 			}
 			else {
 				$('input').animate({'background-color': "#E56C75"}, 200);
@@ -35,8 +28,5 @@ $(document).ready(function() {
 			}
 		$('input').val('');
 	  });
-
- // list drag drop ?? between 2 ULs ??
-$('#id1, #id2').sortable();
-
+$('#list ul').sortable();
 })
