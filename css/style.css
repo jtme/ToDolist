@@ -112,11 +112,9 @@ ul{
 	list-style-type: none;
 	text-transform: uppercase;
 	line-height:130%;
-	background-color: red;
 }
 
 li {
-	background-color: yellow;
 	display: inline-block;
 	width: 100%;
 	border-bottom: 1px solid #BFD4DD;
@@ -140,7 +138,6 @@ li span {
 	display: table-cell; 
     vertical-align: bottom; 
     padding: 0 0 3px 5px;
-    background-color: blue;
  }
 
 .box { 
