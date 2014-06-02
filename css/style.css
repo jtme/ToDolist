@@ -121,12 +121,13 @@ li {
 	color: #4B595F;
 }
 
-li.done {
-	color: #A6BBC5;
+.done {
+	color: red;
 	text-decoration: line-through;
 }
 li:hover {
-	background-color: #FDFEFF;
+	cursor:pointer;
+	background-color: #BFD4DD;
 }
 li.done:hover {
 	background: url("del.png") no-repeat center;
