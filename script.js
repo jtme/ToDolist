@@ -2,20 +2,17 @@ $(document).ready(function() {
  
   	//create a function to add item to list. 
  	function addtolist(a) {
-	  	var new_item = $("<li> <span class=\"item\">" + a + "</span></li>");
-	  	//dbug
-	  	var scrub = $.html(a).text();
-	  //	console.log(scrub)
-	  	//$( '<div>' ).html( foo ).text()
+	  	//console.log("Original input: " + a);
+		var clean_input = $('<div>').text(a).html();
+		//console.log("Clean input: " + clean_input);
+		var new_item = $("<li> <span class=\"item\">" + clean_input + "</span></li>");
+		
 		if(a.length>0)
-			{
-				new_item.appendTo('#list ul'); 		
-			}
-			else {
+			{new_item.appendTo('#list ul'); }
+		else {
 				$('input').animate({'background-color': "#E56C75"}, 200);
 				$('input').animate({'background-color': "#A6BBC5"}, 100);
 			}
-		//RESET
 		$('input').val('');
    }
 
@@ -33,19 +30,18 @@ $(document).ready(function() {
 	});	
 	  $('#input').click (function(){
 	  	
-
 				function splitString(stringToSplit, separator) {
 				  var arrayOfStrings = stringToSplit.split(separator);
-
 				  for (var i=0; i < arrayOfStrings.length; i++)
-				    console.log(arrayOfStrings[i]);
-					addtolist(arrayOfStrings[i]);
+				  console.log(arrayOfStrings[i]);
+				//	addtolist(arrayOfStrings[i]);
 				}
 
 				var origString = $('input').val()
 				var comma = ",";
 
 				splitString(origString, comma);
+
 	  	//addtolist($('input').val())
 	  });
 	$('#list ul').sortable();
