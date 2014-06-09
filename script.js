@@ -32,17 +32,15 @@ $(document).ready(function() {
 	  	
 				function splitString(stringToSplit, separator) {
 				  var arrayOfStrings = stringToSplit.split(separator);
-				  for (var i=0; i < arrayOfStrings.length; i++)
-				  console.log(arrayOfStrings[i]);
-				//	addtolist(arrayOfStrings[i]);
+				  for (var i=0; i < arrayOfStrings.length; i++){
+					    console.log(arrayOfStrings[i]);
+						addtolist(arrayOfStrings[i]);}
 				}
 
 				var origString = $('input').val()
 				var comma = ",";
 
 				splitString(origString, comma);
-
-	  	//addtolist($('input').val())
 	  });
 	$('#list ul').sortable();
 
