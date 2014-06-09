@@ -38,7 +38,7 @@ $(document).ready(function() {
 				}
 
 				var origString = $('input').val()
-				var comma = ",";
+				var comma = "/[\n,\t]/";
 
 				splitString(origString, comma);
 	  });
