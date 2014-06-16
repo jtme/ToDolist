@@ -60,4 +60,14 @@ $(document).ready(function() {
 	$('a[href$="#"]').click(function(event) { event.preventDefault(); });
 
 
+	$('#helper').on( 'click', 'button', function(){ $(this).parent().fadeOut(); 
+	$.cookie('HelperPopup', 'SeenIt');
+	});
+	
+
+
+// check if 'seen message' cookie is set
+// if true, hide message
+
+
 })
