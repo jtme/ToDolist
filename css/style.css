@@ -147,6 +147,15 @@ li span {
 	box-sizing: border-box;         /* IE 8+ */
 }
 
+div#helper {	
+	color: white;
+	font-size: 0.7em;
+	position: relative; 
+	max-width: 660px;
+	margin:  auto;
+	padding: 50; 
+}
+
 @media (max-width: 568px) {
 /*  @media only screen and (min-device-width : 320px) and (max-device-width : 568px) { */
 #list {

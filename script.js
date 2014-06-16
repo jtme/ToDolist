@@ -24,10 +24,10 @@ $(document).ready(function() {
 	$('#input').keyup(function(event){
 		if(event.keyCode == 13) {
 			event.preventDefault();
-			$('#input').click();
+			$('#additem').click();
 		};
 	});	
-	  $('#input').click (function(){
+	  $('#additem').click (function(){
 	  	 	
 				function splitString(stringToSplit, separator) {
 				  var arrayOfStrings = stringToSplit.split(separator);
@@ -35,10 +35,8 @@ $(document).ready(function() {
 					    console.log(arrayOfStrings[i]);
 						addtolist(arrayOfStrings[i]);}
 				}
-
 				var origString = $('input').val()
 				var comma = /[\n,\t]/;
-
 				splitString(origString, comma);
 	  });
 
