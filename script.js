@@ -18,7 +18,23 @@ $(document).ready(function() {
 
  	var list_item = $('.item');
 
- 	$('#list').on( 'click', '.item', function(){ $(this).parent().toggleClass("done"); });
+ 	$('#list').on( 'click', '.item', function(){
+ 		$(this).parent().toggleClass("done").append( '<button>x</button>' ); 
+	
+	var li = $(this).parent();
+
+ 	if ( li.is( '.done' )) {
+ 		$(this).parent().removeClass("done").append( '<button>x</button>' ); 
+		li.find('button' ).remove();
+	// remove button
+	// remove class
+	} else {
+		$(this).parent().addClass("done").append( '<button>x</button>' ); 
+	// add class
+	// add button
+	}
+
+ });
  	$('#list').on( 'dblclick', '.item', function(){ $(this).parent().fadeOut(); });
 
 	$('#input').keyup(function(event){

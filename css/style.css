@@ -150,10 +150,8 @@ li span {
 div#helper {	
 	color: white;
 	font-size: 0.7em;
-	position: relative; 
 	max-width: 660px;
-	margin:  auto;
-	padding: 50; 
+	margin: auto;
 }
 
 @media (max-width: 568px) {
