@@ -59,10 +59,20 @@ $(document).ready(function() {
 
 	$('a[href$="#"]').click(function(event) { event.preventDefault(); });
 
-
-	$('#helper').on( 'click', 'button', function(){ $(this).parent().fadeOut(); 
-	$.cookie('HelperPopup', 'SeenIt');
+     
+     if ($.cookie('HelperPopup') === 'SeenIt') {
+      // exists then hide
+		$('#helper').hide
+      //if dont, allow to set cookie
+      	$('#helper').on( 'click', 'button', function(){ $(this).parent().fadeOut(); 
+		$.cookie('HelperPopup', 'SeenIt');
 	});
+
+
+     };
+
+
+
 	
 
 
