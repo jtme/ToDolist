@@ -24,10 +24,10 @@ $(document).ready(function() {
 	var li = $(this).parent();
 
  	if ( li.is( '.done' )) {
- 		$(this).parent().removeClass("done").append( '<button>x</button>' ); 
+ 		$(this).parent().removeClass("done").append( '<button class="x">   </button>' ); 
 		li.find('button' ).remove();
 	} else {
-		$(this).parent().addClass("done").append( '<button>x</button>' ); 
+		$(this).parent().addClass("done").append( '<button class="x">   </button>' ); 
 	}
 
  });
@@ -61,16 +61,13 @@ $(document).ready(function() {
 
 	if ($.cookie('HelperPopup') === 'SeenIt') {
 	    $('#helper').hide();
+	      console.log("you have been here before");
 	} else {
 	    $('#helper').on('click', 'button', function () {
 	        $(this).parent().fadeOut();
 	        $.cookie('HelperPopup', 'SeenIt');
+	        console.log("you are fresh");
 	    });
 	}
-
-
-// check if 'seen message' cookie is set
-// if true, hide message
-
 
 })

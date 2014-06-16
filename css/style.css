@@ -130,7 +130,7 @@ li:hover {
 	background-color: #BFD4DD;
 }
 li.done:hover {
-	/*background: url("del.png") no-repeat center; */
+	/* */
     background-position: right 20px; 
     background-size: 15px 15px;
 }
@@ -148,10 +148,22 @@ li span {
 }
 
 div#helper {	
-	color: white;
+	color: #838a8f;
 	font-size: 0.7em;
 	max-width: 660px;
 	margin: auto;
+
+}
+
+button.x{
+
+	background: url("del.png") no-repeat center;
+	background-size: 15px 15px;
+	border: 1px solid;
+	width: 15px;
+	height: 15px;
+	float: right;
+
 }
 
 @media (max-width: 568px) {
