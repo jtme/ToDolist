@@ -59,21 +59,14 @@ $(document).ready(function() {
 
 	$('a[href$="#"]').click(function(event) { event.preventDefault(); });
 
-     
-     if ($.cookie('HelperPopup') === 'SeenIt') {
-      // exists then hide
-		$('#helper').hide
-      //if dont, allow to set cookie
-      	$('#helper').on( 'click', 'button', function(){ $(this).parent().fadeOut(); 
-		$.cookie('HelperPopup', 'SeenIt');
-	});
-
-
-     };
-
-
-
-	
+	if ($.cookie('HelperPopup') === 'SeenIt') {
+	    $('#helper').hide();
+	} else {
+	    $('#helper').on('click', 'button', function () {
+	        $(this).parent().fadeOut();
+	        $.cookie('HelperPopup', 'SeenIt');
+	    });
+	}
 
 
 // check if 'seen message' cookie is set
