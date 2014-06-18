@@ -109,6 +109,11 @@ body {
 	top: 45px;
 }
 
+
+#add:hover {
+opacity: 0.6;
+}
+
 ul{
 	padding: 0 30px;
 	min-height: 400px;
@@ -123,6 +128,7 @@ li {
 	border-bottom: 1px solid #BFD4DD;
 	vertical-align: text-bottom;
 	color: #4B595F;
+	position: relative;
 }
 
 .done {
@@ -142,7 +148,7 @@ li span {
 	height: 42px;
 	display: table-cell; 
     vertical-align: bottom; 
-    padding: 0 0 3px 5px;
+    padding: 0 15px 3px 5px;
  }
 
 .box { 
@@ -157,7 +163,6 @@ div#helper {
 	max-width: 660px;
 	margin: auto;
 	text-align: center;
-
 	height: 50px;
 }
 
@@ -172,14 +177,35 @@ div#helper > button {
 button.x{
 	background: url("del.png") no-repeat center;
 	background-size: 15px 15px;
-border: 1px solid;
+	border: 0;
 	width: 15px;
 	height: 15px;
 	float: right;
 	display: inline-block;
 	vertical-align: middle;
 	margin: 0;
-	position: relative;
+	position: absolute;
+	right: 0;
+	top: 35%;
+	margin: auto;
+}
+
+button.x:hover{
+	background: url("del.png") no-repeat center;
+	opacity: 0.6;
+	background-size: 15px 15px;
+	border: 0;
+	width: 15px;
+	height: 15px;
+	float: right;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0;
+	position: absolute;
+	right: 0;
+	top: 35%;
+	margin: auto;
+
 }
 
 @media (max-width: 568px) {
