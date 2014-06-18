@@ -185,7 +185,7 @@ button.x{
 	vertical-align: middle;
 	margin: 0;
 	position: absolute;
-	right: 0;
+	right: 10px;
 	top: 35%;
 	margin: auto;
 }
@@ -202,7 +202,7 @@ button.x:hover{
 	vertical-align: middle;
 	margin: 0;
 	position: absolute;
-	right: 0;
+	right: 10px;
 	top: 35%;
 	margin: auto;
 
