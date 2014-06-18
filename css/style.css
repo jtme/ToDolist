@@ -87,6 +87,7 @@ body {
 	height: 45px;
 	padding: 0 0 3px 5px;
 }
+
 #list {
 	float: left;
 	width: 100%; 
@@ -98,8 +99,11 @@ body {
 	-moz-column-rule-style: hidden;
 	column-rule-style:  hidden;
 	padding-bottom: 30px;
-	box-shadow: 4px 4px 0px #000; 
+	box-shadow: 4px 4px 0px #000;
+	margin-bottom: 20px;
+ 
 }
+
 #add {	
 	position: absolute;
 	right: 45px;
@@ -118,6 +122,7 @@ li {
 	display: inline-block;
 	width: 100%;
 	border-bottom: 1px solid #BFD4DD;
+	vertical-align: text-bottom;
 	color: #4B595F;
 }
 
@@ -152,18 +157,30 @@ div#helper {
 	font-size: 0.7em;
 	max-width: 660px;
 	margin: auto;
+	text-align: center;
+	background: blue;
+	height: 50px;
+}
 
+div#helper > button {
+	font-family: 'Oswald', sans-serif;
+	font-weight: lighter;
+	border: 0;
+	color: white;
+	background:  #838a8f;
 }
 
 button.x{
-
 	background: url("del.png") no-repeat center;
 	background-size: 15px 15px;
-	border: 1px solid;
+border: 1px solid;
 	width: 15px;
 	height: 15px;
 	float: right;
-
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0;
+	position: relative;
 }
 
 @media (max-width: 568px) {
