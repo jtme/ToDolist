@@ -4,7 +4,7 @@ $(document).ready(function () {
         var clean_input = $('<div>').text(a).html();
         //console.log("Clean input: " + clean_input);
         var new_item = $("<li> <span class=\"item\">" + clean_input + "</span></li>");
-
+        //check if input text is more then empty, indicate the problem with bg change
         if ($.trim(a).length > 0) {
             new_item.appendTo('#list ul');
         } else {
@@ -31,15 +31,15 @@ $(document).ready(function () {
         }
 
     });
-
+    //mark as done on click
     $('#list').on('click', 'button', function () {
         $(this).parent().fadeOut();
     });
-
+    //remove on double click
     $('#list').on('dblclick', '.item', function () {
         $(this).parent().fadeOut();
     });
-
+    //"redirects" the function to click when enter is pressed
     $('#input').keyup(function (event) {
         if (event.keyCode == 13) {
             event.preventDefault();
@@ -59,9 +59,9 @@ $(document).ready(function () {
         var comma = /[\n,\t]/;
         splitString(origString, comma);
     });
-
+    //making the items drag-and-droppable
     $('#list ul').sortable();
-
+    //fix un-needed linking to nonexisting #
     $('a[href$="#"]').click(function (event) {
         event.preventDefault();
     });
