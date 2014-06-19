@@ -136,7 +136,6 @@ li {
 	text-decoration: line-through;
 }
 li:hover {
-	cursor:pointer;
 	background-color: #BFD4DD;
 }
 li.done:hover {
@@ -145,6 +144,7 @@ li.done:hover {
     background-size: 15px 15px;
 }
 li span {	
+	cursor:pointer;
 	height: 42px;
 	display: table-cell; 
     vertical-align: bottom; 
@@ -167,6 +167,7 @@ div#helper {
 }
 
 div#helper > button {
+	cursor:pointer;
 	font-family: 'Oswald', sans-serif;
 	font-weight: lighter;
 	border: 0;
@@ -191,6 +192,7 @@ button.x{
 }
 
 button.x:hover{
+	cursor:pointer;
 	background: url("del.png") no-repeat center;
 	opacity: 0.6;
 	background-size: 15px 15px;
